@@ -17,11 +17,11 @@ public class Main {
     }
 
 
-    static double sqrt(double double_number, int count_accuracy) {
+    static double sqrt(double double_number) {
         long [] int_number = double_to_int(double_number);
         long number = int_number[0];
         long divider = int_number[1];
-        double accuracy = 1 / Math.pow(10, count_accuracy);
+        double accuracy = 1 / Math.pow(10, 15);
         boolean flag = true;
         double step = number;
         double answer = 0;
@@ -43,8 +43,7 @@ public class Main {
 
     public static void main(String[] args) {
         double number = in.nextDouble();
-        int accuracy = 10;
         out.println(Math.sqrt(number));
-        out.println(sqrt(number, accuracy));
+        out.println(sqrt(number));
     }
 }
